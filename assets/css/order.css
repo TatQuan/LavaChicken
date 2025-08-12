@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Reenie Beanie, cursive;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Add spacing between header and slider */
+main {
+    margin-top: 30px;
+    flex: 1;
+    padding-bottom: 250px;
+}
+
+.track-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.chicken-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.search-box label {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 5px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    width: 500px;
+    font-size: 1rem;
+    padding-left: 15px;
+}
+
+.search-bar button {
+    background: darkorange;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+.search-bar button:hover {
+    background: orange;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,83 @@
+/* footer */
+footer.footer {
+    background-color: #f7941d; 
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Reenie Beanie, cursive;;
+}
+
+/* logo and slogan */
+.footer-left {
+    flex: 1;
+    margin: 0;
+}
+
+.footer-left .shop-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-family: Reenie Beanie, cursive;
+}
+
+.footer-left .slogan {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* contact s */
+.footer-contact {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-contact h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+/* links 2 groups */
+.footer-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-group a {
+    color: #fff;  
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.link-group a:hover {
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        align-items: center;
+    }
+}

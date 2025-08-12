@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Reenie Beanie, cursive;
+    background-color: #f4f4f4;
+    color: #333;
+}
+main {
+    flex: 1;
+    padding-bottom: 150px;
+}
+
+.title {
+    text-align: center;
+    color: orange;
+    margin: 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background: #fff;
+    width: 300px;
+    margin: 8% auto; /* trước là 15%, bây giờ 8% để đẩy lên */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+#popup-title,
+#popup-price,
+#popup-desc {
+    text-align: right; /* căn phải */
+}
+
+#popup-price {
+    font-weight: normal;
+    color: orange;
+}
+
+#popup-img {
+    width: 150px;
+    height: 370px;
+}
+
+#close {
+    float: right;
+    font-size: 20px;
+    right: 10px
+}
+
+#popup-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FFD700;
+}
+
+.combo-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.combo-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #e67e22;
+}
+
+.combo-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.combo-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-item:hover {
+    transform: translateY(-5px);
+}
+
+.combo-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.combo-item-info {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-item-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.combo-item-info .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.order-btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.order-btn:hover {
+    background-color: #e68900;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.order-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Notification style (if needed for JS notification) */
+#cart-notification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
